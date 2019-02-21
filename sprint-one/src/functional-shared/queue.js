@@ -1,6 +1,5 @@
 var Queue = function() {
   var queue = {};
-
   extend(queue, queueMethods)
 
   queue.count = 0;
