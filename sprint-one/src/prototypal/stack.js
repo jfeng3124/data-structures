@@ -5,6 +5,7 @@ var Stack = function() {
   return someInstance;
 };
 
+var stackMethods = {};
 
 stackMethods.push = function(value) {
           this.storage[this.count] = value;
