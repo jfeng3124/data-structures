@@ -1,11 +1,10 @@
 var Queue = function() {
   var queue = {};
 
-  for(var key in queueMethods) {
-  	extend(queue[key], queueMethods[key])
-  }
-  this.count = 0;
-  this.storage = {};
+  extend(queue, queueMethods)
+
+  queue.count = 0;
+  queue.storage = {};
   return queue;
 };
 
