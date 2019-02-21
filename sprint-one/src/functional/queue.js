@@ -12,15 +12,15 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
-    if (count === 0) {
-      return 0;
-    }
     count--;
     var result = storage[0];
-    for(let i = 0; i < count; i++) {
+    for(let i = 0; i < count; i++) { 
       storage[i] = storage[i+1]
-      return result;
     }
+    if (count === -1) {
+      count = 0;
+    }
+    return result;
   };
 
   someInstance.size = function() {
