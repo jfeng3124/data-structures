@@ -3,13 +3,13 @@ class Stack {
   constructor() {
     this.storage = {};
     this.count = 0;
-Stack.prototype.push = function(value) {
+  }
+  push (value) {
           this.storage[this.count] = value;
           this.count++;
         };
-
-Stack.prototype.pop = function() {
-          if (this.count === 0) {
+  pop () {
+         if (this.count === 0) {
             return this.count = 0;
           }
           this.count--;
@@ -17,10 +17,9 @@ Stack.prototype.pop = function() {
           delete this.storage[this.count];
           return result;
         };
-Stack.prototype.size = function() {
+  size () {
           return this.count
         }
-  }
 }
 
 
