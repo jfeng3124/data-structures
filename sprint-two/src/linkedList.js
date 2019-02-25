@@ -29,18 +29,15 @@ var LinkedList = function() {
       if (node.value === target) {
         return true;
       }
-
       if (node.next === null) {
         return false;
       }
-
       node = node.next;
       return findTarget(node);
     };
-
     return findTarget(node);
   };
-
+  
   return list;
 };
 
