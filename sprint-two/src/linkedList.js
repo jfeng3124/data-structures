@@ -23,7 +23,6 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-    var node = list.head;
 
     var findTarget = function(node) {
       if (node.value === target) {
@@ -35,9 +34,9 @@ var LinkedList = function() {
       node = node.next;
       return findTarget(node);
     };
-    return findTarget(node);
+    return findTarget(list.head);
   };
-  
+
   return list;
 };
 
