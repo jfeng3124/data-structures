@@ -24,10 +24,7 @@ Graph.prototype.removeNode = function(node) {
   if (this.nodes[node]) {
     var neighbor = this.nodes[node];
 
-    // for (let i = 0; i < neighbor.length; i++) {
-    //   var edge = this.nodes[neighbor[i]];
-    //   edge.splice(edge.indexOf(node), 1);
-    // }
+    neighbor.forEach(edge => edge.splice(edge.indexOf(node), 1));
   }
 
   delete this.nodes[node];
