@@ -12,11 +12,7 @@ Graph.prototype.addNode = function(node) {
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
-  
-  if (this.nodes[node]) {
-    return true;
-  }
-  return false;
+  return !!this.nodes[node];
 };
 
 // Removes a node from the graph.
