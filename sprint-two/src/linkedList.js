@@ -36,14 +36,11 @@ var LinkedList = function() {
     return findTarget(node);
   };
 
-
   return list;
 };
 
 var Node = function(value) {
   var node = {};
-
-
   node.value = value;
   node.next = null;
 
