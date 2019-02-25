@@ -12,6 +12,7 @@ Graph.prototype.addNode = function(node) {
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
+  
   if (this.nodes[node]) {
     return true;
   }
@@ -20,6 +21,7 @@ Graph.prototype.contains = function(node) {
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
+
   if (this.nodes[node]) {
     var neighbor = this.nodes[node];
 
@@ -45,6 +47,7 @@ Graph.prototype.addEdge = function(fromNode, toNode) {
 
 // Remove an edge between any two specified (by value) nodes.
 Graph.prototype.removeEdge = function(fromNode, toNode) {
+
   if (this.nodes[fromNode].includes(toNode)) {
     var fromEdge = this.nodes[toNode].indexOf(fromNode);
     var toEdge = this.nodes[fromNode].indexOf(toNode);
