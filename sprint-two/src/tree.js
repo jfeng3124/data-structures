@@ -20,11 +20,11 @@ treeMethods.contains = function(target) {
     return true;
   }
   if (this.children) {
-    this.children.forEach(i => {
-      if (i.contains(target)) {
+    for (let i = 0; i < this.children.length; i++) {
+      if (this.children[i].contains(target)) {
         return true;
       }
-    });
+    }
   }
   return false;
 };
